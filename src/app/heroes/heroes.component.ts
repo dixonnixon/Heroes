@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  hero: string = "Windstorm333";
+  hero: string = "Windstorm";
   constructor() { }
 
   ngOnInit() {
