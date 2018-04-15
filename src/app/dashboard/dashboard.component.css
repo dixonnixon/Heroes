@@ -22,11 +22,13 @@
     position: relative;
   }
   .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 0;
   }
-  .col-1-4 {
+  /* .col-1-4 {
     width: 25%;
-  }
+  } */
   .module {
     padding: 20px;
     text-align: center;
@@ -47,6 +49,13 @@
   .grid-pad > [class*='col-']:last-of-type {
     padding-right: 20px;
   }
+
+  @media (max-width: 320px) {
+    .module {
+      font-size: 10px;
+      max-height: 75px; }
+  }
+
   @media (max-width: 600px) {
     .module {
       font-size: 10px;

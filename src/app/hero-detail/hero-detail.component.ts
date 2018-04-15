@@ -28,6 +28,9 @@ export class HeroDetailComponent implements OnInit {
     // console.log(this.route.snapshot);
     //+sign convert string to a number
     const id = +this.route.snapshot.paramMap.get('id');
+    //what if id will be a 0
+    const idt = 0; 
+    console.log(id);
     //what is .subscribe()?
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
@@ -35,6 +38,11 @@ export class HeroDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.goBack());
   }
   
   ngOnInit() {

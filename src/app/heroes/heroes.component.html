@@ -1,12 +1,27 @@
-<h2>Мої герої</h2>
-<ul class="heroes">
-  <!-- <li *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero" 
-    (click)="onSelect(hero)"> -->
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
-   </li>
-</ul>
-<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+<div class="container">
+  <div class="item item-1">
+    <h2>Мої герої</h2>
+  </div>
+  <div class="item item-2">
+    <ul class="heroes">
+      <!-- <li *ngFor="let hero of heroes"
+        [class.selected]="hero === selectedHero" 
+        (click)="onSelect(hero)"> -->
+      <li *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+        <button class="delete" title="видалити героя +D"
+        (click)="delete(hero)">x</button>
+      </li>
+    </ul>
+    
+  </div>
+  <div class="item item-3">
+      <label>Ім'я героя:
+        <input #heroName />
+      </label>
+      <button (click)="add(heroName.value); heroName.value=''">Додати Героя</button>
+  </div>
+  <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+</div>

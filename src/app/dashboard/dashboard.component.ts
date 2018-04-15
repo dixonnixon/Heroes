@@ -15,8 +15,10 @@ export class DashboardComponent implements OnInit {
     // this.heroes = this.heroService.getHeroes();
     //asynchronouse sign
     this.heroService.getHeroes()
-      // .subscribe(heroes => this.heroes = heroes);
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+      .subscribe(heroes => this.heroes = heroes);
+      //here is defined how many elements are shown on page
+      
+      // .subscribe(heroes => this.heroes = heroes.slice(1, 5));
   }
   
 
