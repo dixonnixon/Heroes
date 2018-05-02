@@ -1,13 +1,18 @@
-<div class="container">
+<div class="container" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
   <div class="item item-1">
     <h2>Мої герої</h2>
   </div>
-  <div class="item item-2">
-    <ul class="heroes">
+  <div class="item item-2" fxFlex="30%">
+    <ul class="heroes"
+      fxFlex 
+      fxLayout.xs="column"
+      fxLayout.md="column"
+      fxLayout.lg="column"
+      fxLayoutGap.xs="0">
       <!-- <li *ngFor="let hero of heroes"
         [class.selected]="hero === selectedHero" 
         (click)="onSelect(hero)"> -->
-      <li *ngFor="let hero of heroes">
+      <li  *ngFor="let hero of heroes">
         <a routerLink="/detail/{{hero.id}}">
           <span class="badge">{{hero.id}}</span> {{hero.name}}
         </a>
