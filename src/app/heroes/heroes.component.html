@@ -1,13 +1,11 @@
-<div class="container" fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center">
-  <div class="item item-1">
+<div class="container" fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="flex-start">
+  <div class="item item-1" fxFlex="100%">
     <h2>Мої герої</h2>
   </div>
-  <div class="item item-2" fxFlex="30%">
+  <div class="item item-2">
     <ul class="heroes"
       fxFlex 
-      fxLayout.xs="column"
-      fxLayout.md="column"
-      fxLayout.lg="column"
+      fxLayout="column"
       fxLayoutGap.xs="0">
       <!-- <li *ngFor="let hero of heroes"
         [class.selected]="hero === selectedHero" 
@@ -27,6 +25,9 @@
         <input #heroName />
       </label>
       <button (click)="add(heroName.value); heroName.value=''">Додати Героя</button>
+  </div>
+  <div class="item item-4" *ngIf="selectedHero">
+      <app-hero-detail [hero]="selectedHero"></app-hero-detail>
   </div>
   <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
 </div>

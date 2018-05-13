@@ -14,7 +14,7 @@ import { Location } from '@angular/common';
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
   constructor(
-    //ActivatedRoute -> route info aboute this created component by route
+    //ActivatedRoute -> route info about this created component by route
     //could extract url parameters
     private route: ActivatedRoute,
     //HeroService -> gets data from server
@@ -23,10 +23,19 @@ export class HeroDetailComponent implements OnInit {
     private location: Location,
   ) {}
 
+  checkRoute(): void {
+   
+  }
+
   getHero(): void {
     //get :ID 
     // console.log(this.route.snapshot);
     //+sign convert string to a number
+    
+    if(this.route.routeConfig) {
+      console.log(this.route.component);
+      console.log(this.route.routeConfig);
+    }
     const id = +this.route.snapshot.paramMap.get('id');
     //what if id will be a 0
     const idt = 0; 
@@ -47,6 +56,7 @@ export class HeroDetailComponent implements OnInit {
   
   ngOnInit() {
     this.getHero();
+    this.checkRoute();
   }
 
 }

@@ -76,7 +76,7 @@ export class HeroService {
     // return of(HEROES);
     //of() to return from mock
     this.messageService.add(`HeroService: ID героя=${id}`);
-    console.log(this.http.get<Hero>(url));
+    // console.log(this.http.get<Hero>(url));
     // return of(HEROES.find(hero => hero.id === id));
       return this.http.get<Hero>(url)
       .pipe(
@@ -96,13 +96,13 @@ export class HeroService {
   addHero(hero: Hero): Observable<Hero> {
     return this.http.post<Hero>(this.heroesUrl, hero, httpOptions)
       .pipe(
-        tap((hero: Hero) => this.log(`added hero w/ id=${hero.id}`)),
+        tap((hero: Hero) => this.log(`added hero with id=${hero.id}`)),
         catchError(this.handleError<Hero>('addHero'))
       );
   }
 
   deleteHero(hero: Hero | number): Observable<Hero> {
-    const id = typeof hero === 'number' ? hero: hero.id;
+    const id = typeof hero === 'number' ? hero : hero.id;
     const url = `${this.heroesUrl}/${id}`;
     return this.http.delete<Hero>(url, httpOptions)
       .pipe(
