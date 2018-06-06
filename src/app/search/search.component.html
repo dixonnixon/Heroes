@@ -1,0 +1,14 @@
+<div id="search-component">
+  <h4>Пошук</h4>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <!-- and | async subscribes this observable automatically -->
+    <li *ngFor="let item of items$ | async">
+      <a routerLink="/detail/{{item.id}}">
+        {{item.name}}
+      </a>
+    </li>
+  </ul>
+</div>

@@ -11,7 +11,6 @@ export class MessagesComponent implements OnInit {
   constructor(public messageService: MessageService) {}
 
   getMessages(): void {
-    // this.heroes = this.heroService.getHeroes();
     //asynchronouse sign
     this.messageService.getMessages();
   }

@@ -1,0 +1,19 @@
+<div *ngIf="item">
+  <h2>Показники {{ item.name | uppercase }}</h2>
+  <div>
+    <span>id: </span>{{item.id}}
+    <span>name: </span>{{item.name}}
+    <span>state: </span>{{item.state}}
+    <span>type: </span>{{item.type}}
+    <span>date: </span>{{item.date}}
+    <span>serial: </span>{{item.serial}}
+    <span>details: </span>{{item.details}}
+  </div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="item.name" placeholder="Назва пристрою">
+    </label>
+  </div>
+  <button (click)="goBack()">Назад</button>
+  <button (click)="save()">Зберегти</button>
+</div>

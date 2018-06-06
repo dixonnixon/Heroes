@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../classes/hero';
-import { HeroService } from '../hero.service';
+import { ItemsService } from '../item.service';
+import { Item } from '../classes/item';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,22 +8,17 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = []; 
-  constructor(private heroService: HeroService) {} 
+  items: Item[] = []; 
+  constructor(private itemsService: ItemsService) {} 
   
-  getHeroes(): void {
-    // this.heroes = this.heroService.getHeroes();
-    //asynchronouse sign
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
-      //here is defined how many elements are shown on page
-      
-      // .subscribe(heroes => this.heroes = heroes.slice(1, 5));
-  }
-  
+  getItems(): void {
+
+    this.itemsService.getitems(1)
+      .subscribe(items => this.items = items);
+  }  
 
   ngOnInit() {
-    this.getHeroes();
+    this.getItems();
   }
 
 }

@@ -1,40 +1,31 @@
-<div class="menu" 
-    fxLayout.md="row" 
-    fxLayout.xs="column"
-    fxLayoutGap="10px" 
-    fxLayoutAlign.md="space-evenly "
-    fxLayoutAlign.sm="space-around"
-    >
-    <div class="hamburger fa-5x" 
-    fxFlex.md="20%" 
-    fxFlex.sm="10%" 
-    fxFlexOrder.xs="2">
+<div class="menu" fxLayout.md="row" fxLayout.xs="column" fxLayoutGap="10px" fxLayoutAlign.md="space-evenly " fxLayoutAlign.sm="space-around">
+    <div class="hamburger fa-5x" fxFlex.md="20%" fxFlex.sm="10%" fxFlexOrder.xs="2">
         <i class="fa fa-align-justify"></i>
     </div>
-    <ul class="navigation" 
-    fxFlex.md="80%"
-    fxLayoutAlign.md="flex-start"
-    fxLayoutAlign.sm="space-around"
-    fxLayout.="row" 
-    fxLayout.xs="column wrap"
-    >
-        <li fxFlex><a href="#">Моє обладняння</a></li>
-        <li fxFlex><a href="#">Персонал</a></li>
-        <li fxFlex><a href="#">Заявка</a></li>
+    <ul class="navigation" fxFlex.md="80%" fxLayoutAlign.md="flex-start" fxLayoutAlign.sm="space-around" fxLayout.="row" fxLayout.xs="column wrap">
+        <li fxFlex>
+            <a href="#">Моє обладняння</a>
+        </li>
+        <li fxFlex>
+            <a href="#">Персонал</a>
+        </li>
+        <li fxFlex>
+            <a href="#">Заявка</a>
+        </li>
     </ul>
-</div>  
+</div>
 <h1>{{title}}</h1>
 <!-- <app-heroes></app-heroes> -->
 <div fxFlex>
     <div>
         <nav>
-            <a routerLink="/heroes">Герої</a>
-            <a routerLink="/dashboard">Найкращі</a>
+            <a routerLink="/dashboard">Головна</a>
+            <a routerLink="/items/1">Моє обладнання</a>
+            <a routerLink="/users">Персонал</a>
+            <a routerLink="/order">Заявка ремонт/апгрейд</a>
         </nav>
     </div>
 </div>
 
 <router-outlet></router-outlet>
 <app-messages></app-messages>
-
-
