@@ -18,6 +18,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { SearchComponent } from "./search/search.component";
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   //components array declared here
@@ -28,7 +29,8 @@ import { UserService } from './user.service';
     MessagesComponent,
     DashboardComponent,
     SearchComponent,
-    UsersComponent
+    UsersComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
