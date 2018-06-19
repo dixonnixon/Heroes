@@ -19,6 +19,7 @@ import { SearchComponent } from "./search/search.component";
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
 import { HeaderComponent } from './header/header.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   //components array declared here
@@ -30,7 +31,8 @@ import { HeaderComponent } from './header/header.component';
     DashboardComponent,
     SearchComponent,
     UsersComponent,
-    HeaderComponent
+    HeaderComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,

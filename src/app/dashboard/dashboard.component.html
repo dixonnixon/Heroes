@@ -1,11 +1,13 @@
-<h3>Обладнання</h3>
-<div class="grid grid-pad">
-  <a *ngFor="let item of items" class="col-1-4" routerLink="/detail/{{item.id}}">
-    <div class="module item">
-      <h4>{{item.name}}</h4>
-    </div>
-  </a>
-</div>
-<div class="grid">
-  <item-search></item-search>
+<div class="container">
+  <h3>Обладнання</h3>
+  <div class="grid grid-pad">
+    <a *ngFor="let item of items" class="col-1-4" routerLink="/detail/{{item.id}}">
+      <div class="module item">
+        <h4>{{item.name}}</h4>
+      </div>
+    </a>
+  </div>
+  <div class="grid">
+    <item-search></item-search>
+  </div>
 </div>

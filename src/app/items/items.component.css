@@ -12,7 +12,7 @@
   width: 15em;
 }
 
-.heroes li {
+.items li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -57,7 +57,7 @@
   border-radius: 4px 0 0 4px;
 }
 
-.heroes button {
+.items button {
   background-color: #eee;
   border: none;
   border-radius: 4px;
@@ -70,11 +70,11 @@
   margin-right: 0.4em;
 }
 
-.heroes button:hover {
+.items button:hover {
   background-color: #cfd8dc;
 }
  
-.heroes button.delete {
+.items button.delete {
   background-color: gray !important;
   color: white;
 }
