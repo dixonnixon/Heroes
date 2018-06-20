@@ -24,12 +24,11 @@
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .sidebar a:hover {
-  background-color: #ddd;
-  color: black;
+  color: white;
 }
 
 .sidebar a.active {
-  background-color: dodgerblue;
+  background-color: #c8dff3;
   color: white;
 }
 

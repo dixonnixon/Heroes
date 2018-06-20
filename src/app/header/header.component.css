@@ -2,13 +2,13 @@
 .header {
   overflow: hidden;
   background-color: #4b9eda75;
-  padding: 15px 20px;
+  padding: 15px 20px 10px 160px;
 }
 
 /* Style the header links */
 .header a {
   float: left;
-  color: black;
+  color: whitesmoke;
   text-align: center;
   padding: 8px 20px 0 20px;
   text-decoration: none;
@@ -19,6 +19,7 @@
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
+  margin-left: 48 px;
   font-size: 25px;
   font-weight: bold;
 }
@@ -32,10 +33,9 @@
   height: 24px;
 }
 
-
 /* Change the background color on mouse-over */
 nav a:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 /* Float the link section to the right */
@@ -45,12 +45,7 @@ nav {
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
-  nav a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  nav {
-    float: none;
+  .header {
+    width: 75%;
   }
 }
