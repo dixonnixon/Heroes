@@ -19,7 +19,6 @@
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
-  margin-left: 48 px;
   font-size: 25px;
   font-weight: bold;
 }
@@ -33,14 +32,24 @@
   height: 24px;
 }
 
-/* Change the background color on mouse-over */
-nav a:hover {
-  transform: scale(1.2);
-}
-
 /* Float the link section to the right */
 nav {
   float: right;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #c8dff3;
+  transform: scale(1.2);
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */

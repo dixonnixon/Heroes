@@ -1,20 +1,8 @@
 /* ItemsComponent's private CSS styles */
 .container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header header"
-    "main ."
-    "main .";
-}
-
-.item-1 {
-  grid-area: header;
-}
-
-.item-2 {
-  grid-area: main;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 .items {
@@ -23,13 +11,24 @@
   padding: 0;
   width: 15em;
 }
+
 .items li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  flex-flow: row;
+  flex-direction: row;
+  justify-content: space-around;
   position: relative;
   cursor: pointer;
   background-color: #eee;
   margin: 0.5em;
-  padding: 0.3em 0;
-  height: 1.6em;
+  height: 2em;
   border-radius: 4px;
 }
 
@@ -42,9 +41,7 @@
 .items a {
   color: #888;
   text-decoration: none;
-  position: relative;
-  display: block;
-  width: 250px;
+  width: 15em;
 }
 
 .items a:hover {
@@ -53,39 +50,31 @@
 
 .items .badge {
   display: inline-block;
-  font-size: small;
   color: white;
-  padding: 0.8em 0.7em 0 0.7em;
+  padding: 0 0.5em 0 0.5em;
   background-color: #607d8b;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  min-width: 16px;
-  text-align: right;
-  margin-right: 0.8em;
+  line-height: 2em;
   border-radius: 4px 0 0 4px;
 }
 
-button {
+.items button {
   background-color: #eee;
   border: none;
-  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
   cursor: hand;
   font-family: Arial;
+  height: 1.3em;
+  align-self: center;
+
+  margin-right: 0.4em;
 }
 
-button:hover {
+.items button:hover {
   background-color: #cfd8dc;
 }
 
-button.delete {
-  position: relative;
-  left: 194px;
-  top: -32px;
+.items button.delete {
   background-color: gray !important;
   color: white;
 }
