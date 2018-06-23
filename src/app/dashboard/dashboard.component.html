@@ -1,4 +1,4 @@
-<h3>Обладнання</h3>
+<!-- <h3>Обладнання</h3>
 <div class="grid grid-pad">
   <a *ngFor="let item of items" class="col-1-4" routerLink="/detail/{{item.id}}">
     <div class="module item">
@@ -8,4 +8,34 @@
 </div>
 <div class="grid">
   <item-search></item-search>
+</div> -->
+<div class="grid">
+  <item-search></item-search>
+</div>
+<div class="row">
+  <div class="column">
+    <h2>Statistics</h2>
+    <div>
+      <div>
+        <p>Users: {{ users?.length || '0' }}</p>
+        <p>Items: {{items?.length || '0'}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <h2>Users</h2>
+    <a *ngFor="let user of users" routerLink="/detail/{{user.id}}">
+      <div>
+        <h4>{{user.name}}</h4>
+      </div>
+    </a>
+  </div>
+  <div class="column">
+    <h2>Items</h2>
+    <a *ngFor="let item of items" routerLink="/detail/{{item.id}}">
+      <div>
+        <h4>{{item.name}}</h4>
+      </div>
+    </a>
+  </div>
 </div>
