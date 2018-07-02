@@ -1,19 +1,21 @@
 <div class="item item-1">
   <h2>Пристрої</h2>
 </div>
-<div class="item item-2">
-  <ul class="items">
-    <li *ngFor="let item of items">
-      <a routerLink="/detail/{{item.id}}">
-        <span class="badge">{{item.id}}</span> {{item.name}}
-      </a>
-      <button class="delete" title="видалити пристрій +D" (click)="delete(item)">x</button>
-    </li>
-  </ul>
-</div>
-<div class="item item-3">
-  <label>Назва пристрою:
-    <input #itemName />
-  </label>
-  <button (click)="add(itemName.value); itemName.value=''">Додати пристрій</button>
+
+<div class="centered">
+  <section class="card-container">
+    <article class="card" *ngFor="let item of items">
+      <header class="card__title">
+        <h3>{{item.name}}</h3>
+      </header>
+      <figure class="card__thumbnail">
+        <img src={{item.src}}>
+      </figure>
+      <main class="card__description">
+        {{item.type}}
+      </main>
+      <a routerLink="/detail/{{item.id}}">Show details</a>
+    </article>
+
+  </section>
 </div>
