@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewContainerRef } from "@angular/core";
+import { ToastsManager } from "ng2-toastr";
 
 @Component({
   selector: "app-header",
@@ -7,7 +8,16 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HeaderComponent implements OnInit {
   title = "Manager Dashboard";
-  constructor() {}
 
-  ngOnInit() {}
+  constructor(public toastr: ToastsManager, vcr: ViewContainerRef) {
+    this.toastr.setRootViewContainerRef(vcr);
+  }
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.toastr.success("You are awesome!", "Success!");
+    }, 2000);
+  }
+
+  showSuccess() {}
 }

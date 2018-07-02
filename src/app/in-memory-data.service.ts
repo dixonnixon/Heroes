@@ -21,7 +21,7 @@ export class InMemoryDataService implements InMemoryDbService {
         id: 1,
         name: "Принтер",
         state: ItemState.ON,
-        type: ItemType.KEYBOARD,
+        type: ItemType.PRINTER,
         date: new Date("10-01-2015"),
         serial: "123FVfV65GH3DF",
         details: [

@@ -20,22 +20,22 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  
+
   flex-flow: row;
   flex-direction: row;
   justify-content: space-around;
   position: relative;
   cursor: pointer;
-  background-color: #EEE;
-  margin: .5em;
+  background-color: #eee;
+  margin: 0.5em;
   height: 2em;
   border-radius: 4px;
 }
 
 .items li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
+  color: #607d8b;
+  background-color: #ddd;
+  left: 0.1em;
 }
 
 .items a {
@@ -45,14 +45,14 @@
 }
 
 .items a:hover {
-  color:#607D8B;
+  color: #607d8b;
 }
 
 .items .badge {
   display: inline-block;
   color: white;
-  padding: 0 .5em 0 .5em;
-  background-color: #607D8B;
+  padding: 0 0.5em 0 0.5em;
+  background-color: #607d8b;
   line-height: 2em;
   border-radius: 4px 0 0 4px;
 }
@@ -66,15 +66,49 @@
   font-family: Arial;
   height: 1.3em;
   align-self: center;
-  
+
   margin-right: 0.4em;
 }
 
 .items button:hover {
   background-color: #cfd8dc;
 }
- 
+
 .items button.delete {
   background-color: gray !important;
   color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  box-shadow: 0px 1px 5px #555;
+  background-color: white;
+  
+}
+.card__title {
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.card__description {
+  padding: 0.5rem;
+  line-height: 1.6em;
+}
+
+
+@media screen and (min-width: 40em) {
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 0 1 calc(50% - 1em);
+  }
 }
