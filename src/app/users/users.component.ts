@@ -11,6 +11,16 @@ import { User } from "../classes/user";
 export class UsersComponent implements OnInit {
   users: User[] = [];
 
+  columnDefs = [
+    //id: 11, name: "Пан Гарнюня", devicesInUse: 4, incedents: {open: [13], closed: [2, 3], pending: []}
+    {headerName: "Identification number", field: "id"},
+    { headerName: "Employee name", field: "name" },
+    { headerName: "Items in use", field: "devicesInUse" },
+    { headerName: "Open incedents", field: "incedents.open" },
+    { headerName: "Pending incedents", field: "incedents.pending" },
+    { headerName: "Closed incedents", field: "incedents.closed" }
+  ];
+
   constructor(
     private usersService: UserService,
     private messageService: MessageService

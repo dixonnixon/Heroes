@@ -23,6 +23,7 @@ import { SideBarComponent } from "./side-bar/side-bar.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ToastModule, ToastOptions } from "ng2-toastr";
 import { ToastCustom } from "./configs/ToastCustum";
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   //components array declared here
@@ -39,6 +40,7 @@ import { ToastCustom } from "./configs/ToastCustum";
   ],
   imports: [
     BrowserModule,
+    AgGridModule.withComponents([]),
     BrowserAnimationsModule,
     ToastModule.forRoot(),
     FormsModule,
