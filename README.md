@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-##Current tasks
+## Current tasks
 *How 2 make not to show page with 0 hero id, also 
 in address bar and in code
 
@@ -40,7 +40,7 @@ Q.: How to pass the count of elements from may be a service or another component
 
 TEST
 
-##AccOffice App
+## AccOffice App
 1. Introduction
 	
 	Our project is the web-site of technological department that manage 
