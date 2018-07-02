@@ -1,12 +1,14 @@
-<div class="item item-1">
-  <h2>Мої підлеглі</h2>
-</div>
-<div class="item item-2">
-  <ul class="items">
-    <li *ngFor="let user of users">
-      <a routerLink="/items/1">
-        <span class="badge">{{user.id}}</span> {{user.name}}
-      </a>
-    </li>
-  </ul>
-</div>
+<ag-grid-angular 
+    #agGrid
+    style="width: auto; height: 600px" 
+    class="ag-theme-balham"
+    [rowData]="users" 
+    [columnDefs]="columnDefs"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    rowSelection="multiple"
+
+    >
+</ag-grid-angular>
+
+<button (click)="getSelectedRows()">Get Selected Rows</button>

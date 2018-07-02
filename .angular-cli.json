@@ -7,10 +7,7 @@
     {
       "root": "src",
       "outDir": "dist",
-      "assets": [
-        "assets",
-        "favicon.ico"
-      ],
+      "assets": ["assets", "favicon.ico"],
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
@@ -21,11 +18,11 @@
       "styles": [
         "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css",
         "../node_modules/font-awesome/css/font-awesome.css",
+        "../node_modules/ag-grid/dist/styles/ag-grid.css",
+        "../node_modules/ag-grid/dist/styles/ag-theme-balham.css",
         "styles.css"
       ],
-      "scripts": [
-        "../node_modules/ng2-toastr/bundles/ng2-toastr.min.js"
-      ],
+      "scripts": ["../node_modules/ng2-toastr/bundles/ng2-toastr.min.js"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
