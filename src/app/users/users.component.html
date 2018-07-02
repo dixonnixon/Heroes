@@ -1,7 +1,14 @@
 <ag-grid-angular 
+    #agGrid
     style="width: auto; height: 600px" 
     class="ag-theme-balham"
     [rowData]="users" 
     [columnDefs]="columnDefs"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    rowSelection="multiple"
+
     >
 </ag-grid-angular>
+
+<button (click)="getSelectedRows()">Get Selected Rows</button>
